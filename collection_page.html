@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nostra</title>
+  <link rel="icon" href="./images/nostra_logo.png">
+  <!-- Tailwind css cdn link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <!-- fontawesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google Fonts link for Poppins -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!-- script link -->
+
+  <!-- add popins font to body -->
+
+  <style>
+    .poppins-regular {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
+  <!--  -->
+
+</head>
+<body class=" poppins-regular">
+
+
+  <!-- responsive navbar -->
+   
+  <div id="notify" class="notification_alert" style="display: block;">
+    <p class="bg-black text-white flex items-center justify-center p-1" style="font-size: 1.5vw;">Sign Up and GET 20%
+      OFF for your first Order <i id="btn" class="fa-solid fa-xmark" style="cursor: pointer; margin-left: 10%;"></i></p>
+  </div>
+
+  <nav class="flex items-center justify-between sticky top-0 z-10 bg-white" style="padding: 1%;">
+    <h1  class="text-2xl font-bold cursor-pointer ">Nostra</h1>
+<!-- menu icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+     stroke-width="1.5" stroke="currentColor" width="25" height="25"
+     id="btnn" class="md:hidden cursor-pointer">
+  <path stroke-linecap="round" stroke-linejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+
+<div class="sidebar" id="sidebar">
+  <div style="display: flex; justify-content: end;">
+    <i class="cancell fa-solid fa-xmark cursor-pointer" id="cancell"></i>
+  </div>
+  <div class="flex justify-start flex-col gap-6 p-5">
+    <div><a href="index.html" class="hover:underline">Home</a></div>
+    <div><a href="index.html" id="arrival_btn" class="hover:underline cursor-pointer">New Arrival</a></div>
+    <div><a href="index.html" id="wanted_btn" class="hover:underline cursor-pointer">Most Wanted</a></div>
+    <div><a href="collection_page.html" class="hover:underline">Collections</a></div>
+    <div><a href="contact_page.html" class="hover:underline">Contact us</a></div>
+  </div>
+</div>
+<style>   .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  z-index: 10;
+  transform: translateX(-100%); /* Hidden off-screen */
+  transition: transform 0.8s ease;
+}
+
+/* Add this class when sidebar should be visible */
+.sidebar.active {
+  transform: translateX(0); /* Slide in */
+}
+
+    
+</style>
+
+
+<!--  -->
+    <section class="text-md px-4 flex text-gray-600 hidden md:flex" style="gap: 4vw;">
+      <div>
+        <a class="hover:underline hover:text-black " href="index.html">Home</a>
+      </div>
+      <div>
+        <a id="arrival_btn" class="hover:underline hover:text-black cursor-pointer " href="index.html">New Arrival</a>
+      </div>
+      <div>
+        <a id="wanted_btn" class="hover:underline hover:text-black cursor-pointer" href="index.html">Most Wanted</a>
+      </div>
+      <div>
+        <a class="hover:underline hover:text-black" href="collection_page.html">Collections</a>
+      </div>
+      <div>
+        <a class="hover:underline hover:text-black" href="contact_page.html">Contact us</a>
+      </div>
+    </section>
+
+  </nav>
+
+  
+  <style>
+    .image_container::-webkit-scrollbar {
+      display: none;
+
+    }
+  </style>
+
+  <!-- products section -->
+  <div class="product_container px-4" style=" display: grid; grid-template-columns: 1fr 3fr;">
+    <div class="filter_sec relative">
+      <div class="filter_sec_categories1 flex flex-col" style="width: fit-content; margin-top: 10%;">
+        <label  style="font-size: 2.5vw; font-weight: bolder; margin-bottom: 3%;">Occasion</label>
+        <label  style="font-size: 2vw;"><input id="summer" type="checkbox"> Summer</label>
+        <label style="font-size: 2vw;"><input id="party" type="checkbox"> Party</label>
+        <label style="font-size: 2vw;"><input id="beach" type="checkbox"> Beach</label>
+      </div>
+
+      <div class="filter_sec_categories2 flex flex-col" style="width: fit-content; margin-top: 10%;">
+        <label style="font-size: 2.5vw; font-weight: bolder; margin-bottom: 3%;">Colors</label>
+        <label  style="font-size: 2vw;"><input id="red" type="checkbox"> Red</label>
+        <label  style="font-size: 2vw;"><input id="orange" type="checkbox"> Orange</label>
+        <label blue style="font-size: 2vw;"><input id="blue" type="checkbox"> Blue</label>
+      </div>
+
+      <div class="filter_sec_categories3 flex flex-col" style="width: fit-content; margin-top: 10%;">
+        <label style="font-size: 2.5vw; font-weight: bolder; margin-bottom: 3%;">Arrivals</label>
+        <label style="font-size: 2vw;"><input id="new" type="checkbox"> New</label>
+        <label style="font-size: 2vw;"><input id="old" type="checkbox"> Old</label>
+      </div>
+      <div
+        style="position: absolute; top: 0%; right: 10%; height: 100%; width: 2px; background-color: black; color: red; ">
+      </div>
+    </div>
+
+    <!-- products -->
+    <div class="products_container mt-3 gap-5  ">
+
+      <div class="flex items-center flex rounded-xs justify-between"
+        style=" border: solid black 1px; border-radius: 5px; padding: 1%;">
+        <input type="text" placeholder="search" class="outline-none" style="width: 96%; ">
+        <i class="fa-solid fa-magnifying-glass" ></i>
+      </div>
+
+      <!--  -->
+      <div id="all_img" class="products_sec grid grid-cols-3 mt-5" style="margin-left: 3%; gap: 2vw;">
+
+        <div id="img1" class=" items-center">
+          <img src="./images/summer shirt 1.jpg" alt="" style="width: 18vw;" class="rounded">
+          <p style="font-size: 2vw; font-weight: bolder;">Summer Shirt</p>
+          <p style="font-size: 1vw;">120 img1</p>
+
+
+        </div>
+
+        <div id="img2" class=" items-center">
+          <img src="./images/party shirt 1.jpg " alt="" style="width: 18vw;" class="rounded">
+          <p style="font-size: 2vw; font-weight: bolder;">Party Shirt</p>
+          <p style="font-size: 1vw;">120 img2</p>
+
+        </div>
+
+        <div id="img3" class=" items-center">
+          <img src="./images/red shirt.jpg" alt="" style="width: 18vw;" class="rounded">
+          <p style="font-size: 2vw; font-weight: bolder;">Red Shirt</p>
+          <p style="font-size: 1vw;">120 img3</p>
+
+        </div>
+
+        <div id="img4" class="items-center">
+          <img src="./images/beach shirt 1.jpg" alt="" style="width: 18vw;" class="rounded ">
+          <p style="font-size: 2vw; font-weight: bolder;">Beach Shirt</p>
+          <p style="font-size: 1vw;">120 img4</p>
+
+        </div>
+
+        <div id="img5" class="items-center">
+          <img src="./images/summer shirt 1.jpg" alt="" style="width: 18vw;" class="rounded">
+          <p style="font-size: 2vw; font-weight: bolder;">Party Shirt</p>
+          <p style="font-size: 1vw;">120 img5</p>
+
+        </div>
+
+        <div id="img6" class="items-center text-left ">
+          <img src="./images/summer shirt 2.jpg" alt="" style="width: 18vw;" class="rounded">
+          <p style="font-size: 2vw; font-weight: bolder;">Summer Shirt</p>
+          <p style="font-size: 1vw;">120 img6</p>
+
+        </div>
+
+         <div id="img7" class="items-center text-left ">
+          <img src="./images/party shirt 1.jpg" alt="" style="width: 18vw;" class="rounded">
+          <p style="font-size: 2vw; font-weight: bolder;">Blue Shirt</p>
+          <p style="font-size: 1vw;">120 img7</p>
+
+        </div>
+
+         <div id="img8" class="items-center text-left ">
+          <img src="./images/orange shirt.webp" alt="" style="width: 18vw;" class="rounded">
+          <p style="font-size: 2vw; font-weight: bolder;">Orange Shirt</p>
+          <p style="font-size: 1vw;">120 img8</p>
+
+        </div>
+
+         <div id="img9" class="items-center text-left ">
+          <img src="./images/beach shirt 2.jpg" alt="" style="width: 18vw;" class="rounded">
+          <p style="font-size: 2vw; font-weight: bolder;">Beach Shirt</p>
+          <p style="font-size: 1vw;">120 img9</p>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+   <!-- News Letter -->
+  <section class="text-center" style="margin-top: 7vw;">
+    <h1 class=" font-bold mt-5 text-center" style="font-size: 3vw;">Join our News Letter</h1>
+    <p style="font-size: 2vw;">Signup for our email newsletter to exclusive discounts, updates, and more...</p>
+    <input type="text" class="border border-black m-3" style="width: 80%; padding: 0.5%;">
+    <br>
+    <button class="rounded bg-black text-white cursor-pointer inline-block"
+      style="padding: 1% 2%; font-size: 1vw; margin-top: 1%;">Subscribe <i class="fa-solid fa-arrow-right"
+        style="font-size: 1vw;"></i>
+    </button>
+  </section>
+
+  <!-- footer -->
+  <section class="bg-black text-white flex flex-col p-8" style="margin-top: 2%;">
+    <h1 class="font-bold " style="font-size: 3vw;">Nostra</h1>
+    <p style="font-size: 2vw; padding: 1% 0%">Discover beautiful, healthy plants delivered to your door—perfect for home and office
+      decor.</p>
+    <div class="flex justify-between" style="width: 20%; ">
+      <div class="facebook_icon">
+
+        <i class="fa-brands fa-facebook" alt="" style="font-size: 2.5vw; "></i>
+
+      </div>
+      <div class="twitter_icon">
+
+        <i class="fa-brands fa-twitter" alt="" style="font-size: 2.5vw;"></i>
+
+      </div>
+      <div class="youtube_icon">
+
+        <i class="fa-brands fa-youtube" alt="" style="font-size: 2.5vw;"></i>
+
+      </div>
+    </div>
+    <p style="font-size: 2vw; padding: 1% 0%;">&copy;2025 Nostra.com</p>
+  </section>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

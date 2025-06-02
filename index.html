@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nostra</title>
+  <link rel="icon" href="./images/nostra_logo.png">
+  <!-- Tailwind css cdn link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <!-- fontawesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Google Fonts link for Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!-- add popins font to body -->
+
+  <style>
+    .poppins-regular {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+  </style>
+
+</head>
+
+<body class=" poppins-regular">
+
+
+  <!-- responsive navbar -->
+
+  <div id="notify" class="notification_alert" style="display: block;">
+    <p class="bg-black text-white flex items-center justify-center p-1" style="font-size: 1.5vw;">Sign Up and GET 20%
+      OFF for your first Order <i id="btn" class="fa-solid fa-xmark" style="cursor: pointer; margin-left: 10%;"></i></p>
+  </div>
+
+  <nav class="flex items-center justify-between sticky top-0 z-10 bg-white" style="padding: 1%;">
+    <h1 class="text-2xl font-bold cursor-pointer ">Nostra</h1>
+    <!-- menu icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      width="25" height="25" id="btnn" class="md:hidden cursor-pointer">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+    </svg>
+
+    <div class="sidebar" id="sidebar">
+      <div style="display: flex; justify-content: end;">
+        <i class="cancell fa-solid fa-xmark cursor-pointer" id="cancell"></i>
+      </div>
+      <div class="flex justify-start flex-col gap-6 p-5">
+        <div><a href="index.html" class="hover:underline">Home</a></div>
+        <div><a id="arrival_btn1" class="hover:underline cursor-pointer">New Arrival</a></div>
+        <div><a id="wanted_btn1" class="hover:underline cursor-pointer">Most Wanted</a></div>
+        <div><a href="collection_page.html" class="hover:underline">Collections</a></div>
+        <div><a href="contact_page.html" class="hover:underline">Contact us</a></div>
+      </div>
+    </div>
+    <style>
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: black;
+        color: white;
+        padding: 10px;
+        z-index: 10;
+        transform: translateX(-100%);
+
+        transition: transform 0.8s ease;
+      }
+
+      .sidebar.active {
+        transform: translateX(0);
+      }
+    </style>
+
+
+    <!-- navBar -->
+    <section class="text-md px-4 flex text-gray-600 hidden md:flex" style="gap: 4vw;">
+      <div>
+        <a class="hover:underline hover:text-black " href="index.html">Home</a>
+      </div>
+      <div>
+        <a id="arrival_btn2" class="hover:underline hover:text-black cursor-pointer">New Arrival</a>
+      </div>
+      <div>
+        <a id="wanted_btn2" class="hover:underline hover:text-black cursor-pointer">Most Wanted</a>
+      </div>
+      <div>
+        <a class="hover:underline hover:text-black" href="collection_page.html">Collections</a>
+      </div>
+      <div>
+        <a class="hover:underline hover:text-black" href="contact_page.html">Contact us</a>
+      </div>
+    </section>
+
+  </nav>
+
+  <style>
+    .image_container::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+
+  <!-- ad container -->
+  <div class="image_wrap  relative"
+    style="margin: 0% 1%;  display: flex; align-items: center; justify-content: center;">
+
+    <div class="image_container rounded-md" style=" display: flex; width: 100%; overflow-x: scroll;">
+      <!-- <div class="bg-[url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80')]  h-100 w-full text-white border-5"
+                style=" display: grid; grid-template-columns: 1fr 3fr 1fr; flex: none;"> -->
+      <div class="images  " style=" width: 100%; display: grid; flex: none;">
+        <img src="./images/banner 2.jpg" class=" " alt="banner" style="  width: 100%;">
+
+        <div class="absolute flex items-center" style="top: 25%;">
+          <img id="back_btn" src="./images/less-than.png" alt=""
+            style="border: solid black 1px; width: 12vw; margin: 5px;">
+        </div>
+
+        <div class=" absolute flex items-center text-center" style="left: 15%; top: 8%; flex-direction: column;">
+          <p class="text-white mt-5" style="font-weight: bolder; font-size: 5vw;">Level up your style with our
+          <p class="text-white mb-2" style="font-weight: bolder; font-size: 1vw;">Summer Collections</p>
+          </p>
+
+          <button class="rounded bg-white text-black  cursor-pointer "
+            style="font-size: 1vw; padding: 0.5vw 0.8vw;">Shop Now <i class="fa-solid fa-arrow-right"
+              style="font-size: 1vw;"></i>
+          </button>
+        </div>
+        <div
+          style="position: absolute; display: flex;align-items: center; justify-content: right; right: 0%; top: 25%;">
+          <img id="next_btn" src="./images/greater-than.png" alt=""
+            style="border: solid black 1px; width: 12vw; margin: 5px;">
+        </div>
+
+      </div>
+      <div class="images  " style="width: 100%; display: grid; gap: 20px; flex: none;">
+        <img src="./images/banner 1.jpg" class=" " alt="banner" style=" border: solid 1px; width: 100%;">
+      </div>
+      <div class="images  " style="width: 100%; display: grid; gap: 20px; flex: none;">
+        <img src="./images/banner 3.jpg" class=" " alt="banner" style="border: solid black 1px; width: 100%;">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- brands -->
+  <section class="md:text-2xl px-4 mt-10 text-center ">
+    <h2 class="md:text-2xl font-bold text-xl  text-left">Brands</h2>
+    <div class="flex gap-5 justify-between my-5">
+
+      <div class=" puma">
+        <img src="./images/puma.png" class=" items-center" alt="" style="width: 4vw;">
+        <h2 style="font-size: 2vw;" class="font-medium ">Puma</h2>
+      </div>
+
+      <div class="  ">
+        <img src="./images/adidas.png" class="w-12 inline" alt="" style="width: 4vw;">
+        <h2 style="font-size: 2vw;" class="font-medium ">Adidas</h2>
+      </div>
+
+      <div class="simple ">
+        <img src="./images/Image_May_28__2025__08_45_08_PM-removebg-preview.png" alt="" style="width: 4vw;">
+        <h2 style="font-size: 2vw;" class="font-medium ">Simple</h2>
+      </div>
+
+      <div class="leaves">
+        <img src="./images/leaves.png" alt="" style="width: 4vw;">
+        <h2 style="font-size: 2vw;" class="font-medium ">Leaves</h2>
+      </div>
+
+      <div class="behance">
+        <img src="./images/behance.png" alt="" style="width: 4vw;">
+        <h2 style="font-size: 2vw;" class="font-medium ">Behance</h2>
+      </div>
+
+      <div class="twitch">
+        <img src="./images/twitch.png" alt="" style="width: 4vw;">
+        <h2 style="font-size: 2vw;" class="font-medium ">Twitch</h2>
+      </div>
+
+      <div class="leaves">
+        <img src="./images/leaves.png" alt="" style="width: 4vw;">
+        <h2 style="font-size: 2vw;" class="font-medium ">Leaves</h2>
+      </div>
+
+    </div>
+  </section>
+  <!-- about -->
+  <section class=" text-left  px-4">
+    <h2 class="md:text-2xl font-bold text-xl mt-10">We provide Best</h2>
+    <h2 class="md:text-2xl font-bold text-xl ">Coustomer Expriences</h2>
+
+    <div class="grid grid-cols-4 ">
+
+      <div class="bg-gray-100 p-2 m-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          style="width: 20%;">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+        </svg>
+        <h2 style="font-size: 1vw; font-weight: bold;">Original Products</h2>
+        <p style="font-size: 1vw;">Lorem ipsum dolor sit amet consectetur andre adipisicing elit.The Dolorum
+        </p>
+
+      </div>
+      <div class="bg-gray-100 p-2 m-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          style="width: 20%;">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
+        </svg>
+        <h2 style="font-size: 1vw; font-weight: bold;">Satisfication Guarantee</h2>
+        <p style="font-size: 1vw;">Lorem ipsum dolor sit amet consectetur andre adipisicing elit.The Dolorum
+        </p>
+      </div>
+
+      <div class="bg-gray-100 p-2 m-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          style="width: 20%;">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
+        </svg>
+
+        <h2 style="font-size: 1vw; font-weight: bold;">New Arrival Everyday</h2>
+        <p style="font-size: 1vw;">Lorem ipsum dolor sit amet consectetur andre adipisicing elit.The Dolorum
+        </p>
+      </div>
+
+      <div class="bg-gray-100 p-2 m-4">
+        <img src="./images/truck.png" alt="" style="width: 20%;">
+
+        <h2 style="font-size: 1vw; font-weight: bold;">Fast & Free Shipping</h2>
+        <p style="font-size: 1vw;">Lorem ipsum dolor sit amet consectetur andre adipisicing elit.The Dolorum
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- New Arrivals -->
+  <section id="new_arrivals" class=" p-5 text-center">
+    <h1 class="font-bold text-xl md:text-2xl mb-5 text-left">New Arrivals</h1>
+    <!-- Grid with fixed width columns and gap -->
+    <div class="flex flext justify-between mt-5" style=" gap: 1vw;">
+
+      <div class="items-center relative" style="width: 20vw;">
+        <img src="./images/wanted 2.jpg" alt="" class=" rounded ">
+        <div class="absolute top-0 left-0 rounded bg-gray-700 opacity-75 " style="width: 100%; height: 100%;"></div>
+        <button class="absolute bg-white rounded-lg" style="top: 50%;left: 22%; padding: 5% 10%; font-size: 1.2vw;">Shop
+          Now <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="items-center relative" style="width: 20vw;">
+        <img src="./images/wanted 3.jpg" alt="" class=" rounded ">
+        <div class="absolute top-0 left-0 rounded bg-gray-700 opacity-75 " style="width: 100%; height: 100%;"></div>
+        <button class="absolute bg-white rounded-lg" style="top: 50%;left: 22%; padding: 5% 10%; font-size: 1.2vw;">Shop
+          Now <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="items-center relative" style="width: 20vw;">
+        <img src="./images/wanted 2.jpg" alt="" class=" rounded ">
+        <div class="absolute top-0 left-0 rounded bg-gray-700 opacity-75 " style="width: 100%; height: 100%;"></div>
+        <button class="absolute bg-white rounded-lg" style="top: 50%;left: 22%; padding: 5% 10%; font-size: 1.2vw;">Shop
+          Now <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="items-center relative" style="width: 20vw;">
+        <img src="./images/wanted 1.jpg" alt="" class=" rounded ">
+        <div class="absolute top-0 left-0 rounded bg-gray-700 opacity-75 " style="width: 100%; height: 100%;"></div>
+        <button class="absolute bg-white rounded-lg" style="top: 50%;left: 22%; padding: 5% 10%; font-size: 1.2vw;">Shop
+          Now <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- most wanted -->
+  <section id="most_wanted" class="p-5 text-center">
+    <h1 class="font-bold text-xl md:text-2xl mb-5 text-left">Most Wanted</h1>
+    <!-- Grid with fixed width columns and gap -->
+    <style>
+      .wrapper::-webkit-scrollbar {
+        width: 0;
+      }
+
+      .wrapper .most_wanted_image {
+        min-width: 21%;
+      }
+    </style>
+    <div class="wrapper flex justify-between mt-5" style=" gap: 2vw; overflow-x: scroll">
+
+      <div class="most_wanted_image relative items-center">
+        <img src="./images/wanted 1.jpg" alt="" class="rounded">
+        <button class="absolute bg-red-500 text-white font-bold rounded-lg"
+          style="top: 0%;left: 0%; padding: 2% 5%; font-size: 2vw;">Sale </button>
+        <!-- heart icon -->
+        <button class="absolute" style="bottom: 4%;right: 5%;font-size: 2.2vw;">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+      </div>
+
+      <div class="most_wanted_image relative items-center">
+        <img src="./images/wanted 2.jpg" alt="" class="rounded">
+        <button class="absolute bg-red-500 text-white font-bold rounded-lg"
+          style="top: 0%;left: 0%; padding: 2% 5%; font-size: 2vw;">Sale </button>
+        <!-- heart icon -->
+        <button class="absolute" style="bottom: 4%;right: 5%;font-size: 2.2vw;">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+      </div>
+
+      <div class="most_wanted_image relative items-center">
+        <img src="./images/wanted 3.jpg" alt="" class="rounded">
+        <button class="absolute bg-red-500 text-white font-bold rounded-lg"
+          style="top: 0%;left: 0%; padding: 2% 5%; font-size: 2vw;">Sale </button>
+        <!-- heart icon -->
+        <button class="absolute" style="bottom: 4%;right: 5%;font-size: 2.2vw;">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+      </div>
+
+      <div class="most_wanted_image relative items-center">
+        <img src="./images/wanted 1.jpg" alt="" class="rounded">
+        <button class="absolute bg-red-500 text-white font-bold rounded-lg"
+          style="top: 0%;left: 0%; padding: 2% 5%; font-size: 2vw;">Sale </button>
+        <!-- heart icon -->
+        <button class="absolute" style="bottom: 4%;right: 5%;font-size: 2.2vw;">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+      </div>
+
+      <div class="most_wanted_image relative items-center">
+        <img src="./images/wanted 2.jpg" alt="" class="rounded">
+        <button class="absolute bg-red-500 text-white font-bold rounded-lg"
+          style="top: 0%;left: 0%; padding: 2% 5%; font-size: 2vw;">Sale </button>
+        <!-- heart icon -->
+        <button class="absolute" style="bottom: 4%;right: 5%;font-size: 2.2vw;">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+      </div>
+
+      <div class="most_wanted_image relative items-center">
+        <img src="./images/wanted 3.jpg" alt="" class="rounded">
+        <button class="absolute bg-red-500 text-white font-bold rounded-lg"
+          style="top: 0%;left: 0%; padding: 2% 5%; font-size: 2vw;">Sale </button>
+        <!-- heart icon -->
+        <button class="absolute" style="bottom: 4%;right: 5%;font-size: 2.2vw;">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- advertisment -->
+  <section class="bg-black flex justify-start items-center text-white m-4" style="padding: 2%;">
+    <div class=" " >
+      <img src="./images/advertise.jpg" alt="" class="w-full h-50">
+    </div>
+    <div class="" style="margin-left: 4%; align-items: center;">
+      <h1 class="font-bold" style="font-size: 3vw;">Limited Offer </h1>
+      <h2 class="font-bold md:text-2xl " style="font-size: 2vw;">35% OFF on this for the first 30 Coustomer</h2>
+      <button class="rounded bg-white text-black  cursor-pointer inline-block mt-2"
+        style="font-size: 1vw; padding: 2% 3%;">Shop Now <i class="fa-solid fa-arrow-right" style="font-size: 1vw;"></i>
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- News Letter -->
+  <section class="text-center ">
+    <h1 class=" font-bold mt-5 text-center" style="font-size: 3vw;">Join our News Letter</h1>
+    <p style="font-size: 2vw;">Signup for our email newsletter to exclusive discounts, updates, and more...</p>
+    <input type="text" class="border border-black m-3" style="width: 80%; padding: 0.5%;">
+    <br>
+    <button class="rounded bg-black text-white cursor-pointer inline-block"
+      style="padding: 1% 2%; font-size: 1vw; margin-top: 1%;">Subscribe <i class="fa-solid fa-arrow-right"
+        style="font-size: 1vw;"></i>
+    </button>
+  </section>
+
+  <!-- footer -->
+  <section class="bg-black text-white flex flex-col p-8" style="margin-top: 2%;">
+    <h1 class="font-bold " style="font-size: 3vw;">Nostra</h1>
+    <p style="font-size: 2vw; padding: 1% 0%">Discover beautiful, healthy plants delivered to your door—perfect for home
+      and office
+      decor.</p>
+    <div class="flex justify-between" style="width: 20%; ">
+      <div class="facebook_icon">
+        <i class="fa-brands fa-facebook" alt="" style="font-size: 2.5vw; "></i>
+      </div>
+
+      <div class="twitter_icon">
+        <i class="fa-brands fa-twitter" alt="" style="font-size: 2.5vw;"></i>
+      </div>
+
+      <div class="youtube_icon">
+        <i class="fa-brands fa-youtube" alt="" style="font-size: 2.5vw;"></i>
+      </div>
+
+    </div>
+    <p style="font-size: 2vw; padding: 1% 0%;">&copy;2025 Nostra.com</p>
+  </section>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
