@@ -36,9 +36,10 @@
 
   <!-- responsive navbar -->
    
-  <div id="notify" class="notification_alert" style="display: block;">
-    <p class="bg-black text-white flex items-center justify-center p-1" style="font-size: 1.5vw;">Sign Up and GET 20%
-      OFF for your first Order <i id="btn" class="fa-solid fa-xmark" style="cursor: pointer; margin-left: 10%;"></i></p>
+  <div id="notify" class="notification_alert bg-black text-white text-center p-1" style=" font-size: 1.5vw;">
+    <p class="" style="display: inline;">Sign Up and <p style="font-size: 1.5vw; font-weight: bold; display: inline;"> GET 20%   OFF </p>  for your first Order 
+    <i id="btn" class="fa-solid fa-xmark" style="cursor: pointer; margin-left: 5%;">
+    </i></p>
   </div>
 
   <nav class="flex items-center justify-between sticky top-0 z-10 bg-white" style="padding: 1%;">
@@ -51,11 +52,11 @@
         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 </svg>
 
-<div class="sidebar" id="sidebar">
+<div class="sidebar fixed t-0 b-0 bg-black text-white " id="sidebar">
   <div style="display: flex; justify-content: end;">
     <i class="cancell fa-solid fa-xmark cursor-pointer" id="cancell"></i>
   </div>
-  <div class="flex justify-start flex-col gap-6 p-5">
+  <div class="flex justify-start flex-col gap-6 p-5" style="font-size: 3vw;">
     <div><a href="index.html" class="hover:underline">Home</a></div>
     <div><a href="index.html" id="arrival_btn" class="hover:underline cursor-pointer">New Arrival</a></div>
     <div><a href="index.html" id="wanted_btn" class="hover:underline cursor-pointer">Most Wanted</a></div>
@@ -66,11 +67,9 @@
 <style>   .sidebar {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 0; 
   width: 50%;
   height: 100%;
-  background-color: black;
-  color: white;
   padding: 10px;
   z-index: 10;
   transform: translateX(-100%); /* Hidden off-screen */
@@ -117,10 +116,10 @@
 
   <!-- products section -->
   <div class="product_container px-4" style=" display: grid; grid-template-columns: 1fr 3fr;">
-    <div class="filter_sec relative">
+    <div class="filter_sec relative ">
       <div class="filter_sec_categories1 flex flex-col" style="width: fit-content; margin-top: 10%;">
-        <label  style="font-size: 2.5vw; font-weight: bolder; margin-bottom: 3%;">Occasion</label>
-        <label  style="font-size: 2vw;"><input id="summer" type="checkbox"> Summer</label>
+        <label style="font-size: 2.5vw; font-weight: bolder; margin-bottom: 3%;">Occasion</label>
+        <label style="font-size: 2vw;"><input id="summer" type="checkbox"> Summer</label>
         <label style="font-size: 2vw;"><input id="party" type="checkbox"> Party</label>
         <label style="font-size: 2vw;"><input id="beach" type="checkbox"> Beach</label>
       </div>
@@ -157,7 +156,7 @@
         <div id="img1" class=" items-center">
           <img src="./images/summer shirt 1.jpg" alt="" style="width: 18vw;" class="rounded">
           <p style="font-size: 2vw; font-weight: bolder;">Summer Shirt</p>
-          <p style="font-size: 1vw;">120 img1</p>
+          <p style="font-size: 1vw;">₹250</p>
 
 
         </div>
@@ -165,56 +164,56 @@
         <div id="img2" class=" items-center">
           <img src="./images/party shirt 1.jpg " alt="" style="width: 18vw;" class="rounded">
           <p style="font-size: 2vw; font-weight: bolder;">Party Shirt</p>
-          <p style="font-size: 1vw;">120 img2</p>
+          <p style="font-size: 1vw;">₹450</p>
 
         </div>
 
         <div id="img3" class=" items-center">
           <img src="./images/red shirt.jpg" alt="" style="width: 18vw;" class="rounded">
           <p style="font-size: 2vw; font-weight: bolder;">Red Shirt</p>
-          <p style="font-size: 1vw;">120 img3</p>
+          <p style="font-size: 1vw;">₹499</p>
 
         </div>
 
         <div id="img4" class="items-center">
           <img src="./images/beach shirt 1.jpg" alt="" style="width: 18vw;" class="rounded ">
           <p style="font-size: 2vw; font-weight: bolder;">Beach Shirt</p>
-          <p style="font-size: 1vw;">120 img4</p>
+          <p style="font-size: 1vw;">₹399</p>
 
         </div>
 
         <div id="img5" class="items-center">
           <img src="./images/summer shirt 1.jpg" alt="" style="width: 18vw;" class="rounded">
           <p style="font-size: 2vw; font-weight: bolder;">Party Shirt</p>
-          <p style="font-size: 1vw;">120 img5</p>
+          <p style="font-size: 1vw;">₹359</p>
 
         </div>
 
         <div id="img6" class="items-center text-left ">
           <img src="./images/summer shirt 2.jpg" alt="" style="width: 18vw;" class="rounded">
           <p style="font-size: 2vw; font-weight: bolder;">Summer Shirt</p>
-          <p style="font-size: 1vw;">120 img6</p>
+          <p style="font-size: 1vw;">₹299</p>
 
         </div>
 
          <div id="img7" class="items-center text-left ">
           <img src="./images/party shirt 1.jpg" alt="" style="width: 18vw;" class="rounded">
           <p style="font-size: 2vw; font-weight: bolder;">Blue Shirt</p>
-          <p style="font-size: 1vw;">120 img7</p>
+          <p style="font-size: 1vw;">₹699</p>
 
         </div>
 
          <div id="img8" class="items-center text-left ">
           <img src="./images/orange shirt.webp" alt="" style="width: 18vw;" class="rounded">
           <p style="font-size: 2vw; font-weight: bolder;">Orange Shirt</p>
-          <p style="font-size: 1vw;">120 img8</p>
+          <p style="font-size: 1vw;">₹259</p>
 
         </div>
 
          <div id="img9" class="items-center text-left ">
           <img src="./images/beach shirt 2.jpg" alt="" style="width: 18vw;" class="rounded">
           <p style="font-size: 2vw; font-weight: bolder;">Beach Shirt</p>
-          <p style="font-size: 1vw;">120 img9</p>
+          <p style="font-size: 1vw;">₹349</p>
 
         </div>
 

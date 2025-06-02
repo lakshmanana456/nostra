@@ -142,7 +142,7 @@ oldCheckbox.addEventListener("click", updateVisibleImages)
 });
 
 
-//selecting notification elements
+//selecting advertisment elements
 let cancel = document.querySelector("#btn");
 let noti = document.querySelector("#notify");
 
@@ -157,13 +157,13 @@ cancel.addEventListener("click", function () {
 
         back_btn.addEventListener("click", function () {
             scrollContainer.style.scrollBehavior = "smooth"
-            let scrollPercentage = 1; // Scroll 25% of the visible area
+            let scrollPercentage = 1; 
             scrollContainer.scrollLeft -= scrollContainer.clientWidth * scrollPercentage
         })
 
         next_btn.addEventListener("click", function () {
             scrollContainer.style.scrollBehavior = "smooth"
-            let scrollPercentage = 1; // Scroll 25% of the visible area
+            let scrollPercentage = 1; 
             scrollContainer.scrollLeft += scrollContainer.clientWidth * scrollPercentage
         })
         
