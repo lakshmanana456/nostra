@@ -46,11 +46,11 @@
       <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
     </svg>
 
-    <div class="sidebar" id="sidebar">
+    <div class="sidebar sidebar bg-black text-white text-xl" id="sidebar">
       <div style="display: flex; justify-content: end;">
         <i class="cancell fa-solid fa-xmark cursor-pointer" id="cancell"></i>
       </div>
-      <div class="flex justify-start flex-col gap-6 p-5" style="font-size: 3vw;">
+      <div class="flex justify-start flex-col gap-6 p-5">
         <div><a href="index.html" class="hover:underline">Home</a></div>
         <div><a href="index.html" id="arrival_btn" class="hover:underline cursor-pointer">New Arrival</a></div>
         <div><a href="index.html" id="wanted_btn" class="hover:underline cursor-pointer">Most Wanted</a></div>
@@ -65,8 +65,6 @@
         left: 0;
         width: 50%;
         height: 100%;
-        background-color: black;
-        color: white;
         padding: 10px;
         z-index: 10;
         transform: translateX(-100%);
@@ -107,7 +105,7 @@
   </style>
 
   <!-- contact form -->
-  <section class="bg-white dark:bg-gray-900">
+  <!-- <section class="bg-white dark:bg-gray-900">
     <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
       <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us
       </h2>
@@ -142,7 +140,56 @@
         <button type="submit" class="bg-black text-white p-2 rounded">Send Message</button>
       </form>
     </div>
-  </section>
+  </section> -->
+
+<!-- contact form -->
+ <style>
+  .emailError,.subjectError,.messageError{
+    display: none;  
+  }
+ </style>
+ <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+            <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us
+            </h2>
+            <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical
+                issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.
+            </p>
+            <form action="#" class="space-y-8">
+                <div style="position: relative;">
+                    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
+                        email</label>
+                    <input type="email" id="email"
+                        class="outline-none shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                        placeholder="name@flowbite.com" >
+
+                        <p class="emailError text-sm text-red-500 pl-2.5" style="position: absolute; top: 100%;">Email Error</p>
+                </div>
+                <div style="position: relative;">
+                    <label for="subject"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+                    <input type="text" id="subject"
+                        class="outline-none subject block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                        placeholder="Let us know how we can help you">
+                        <p class="subjectError text-sm text-red-500 pl-2.5" style="position: absolute; top: 100%;">*Required</p>
+                        
+                </div>
+                <div class="relative sm:col-span-2">
+                    <label for="message"  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your
+                        message</label>
+                   
+                         <input type="text" id="subject"
+                        class="outline-none message block p-3 w-full h-28 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                        placeholder="Write message here...">
+
+                        <p class="messageError text-sm text-red-500 pl-2.5" style="position: absolute; top: 100%;">write message between 0-200 words</p>
+
+                      </div>
+                <button class="submit bg-black text-white p-2.5" type="submit">Send message</button>
+            </form>
+        </div>
+    </section>
+
 
   <!-- footer -->
   <section class="bg-black text-white flex flex-col p-8" style="margin-top: 2%;">
@@ -169,7 +216,7 @@
     </div>
     <p style="font-size: 2vw; padding: 1% 0%;">&copy;2025 Nostra.com</p>
   </section>
-  <script src="script.js"></script>
+  <script src="contact_page.js"></script>
 </body>
 
 </html>
