@@ -22,9 +22,10 @@ cancel.addEventListener("click", function () {
 // contact form validation
 
 
-let submit = document.querySelector(".submit")
-submit.addEventListener("click", function (event) {
+let form = document.querySelector("form")
+form.addEventListener("submit", function (event) {
     event.preventDefault()
+
 
     var emailRegex = /^[a-zA-Z0-9]+@gmail.com/
     var subjectRegex=/.*[a-zA-Z0-9!@#$%^&*(),.?\":{}|<>].*/
@@ -67,6 +68,10 @@ submit.addEventListener("click", function (event) {
         if (valid == true) {
         alert("Message send successfully")
          
-          FormData.reset()
+         
       }
-})
+      
+form.reset()
+}
+   
+)
